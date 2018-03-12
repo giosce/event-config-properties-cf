@@ -1,0 +1,57 @@
+spring:
+  profiles:
+    active: development
+---
+spring:
+  profiles: cloud
+  redis:
+    host: ${vcap.services.catalog-redis.credentials.hostname:localhost}
+    port: ${vcap.services.catalog-redis.credentials.port:6379}
+---
+spring:
+  profiles: development
+  redis:
+    host: 192.168.99.100
+    port: 6379
+  datasource:
+    url: jdbc:mysql://10.0.9.37:3306/service_instance_db?useSSL=false
+    username: 270a9d24426a481694529229d1ebfe67
+    password: 0dnnuqehz2v1dt17
+    initialize: true
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://discovery-service-chatty-raven.apps.apbg.apcf.io}/eureka/
+---
+spring:
+  profiles: docker
+  redis:
+    host: redis
+    port: 6379
+  datasource:
+    url: jdbc:mysql://mysql:3306/dev?useSSL=false
+    username: root
+    password: dbpass
+    initialize: true
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/
+---
+spring:
+  profiles: test
+  redis:
+    host: localhost
+    port: 6379
+  jpa:
+    database: H2
+  datasource:
+    initialize: false
