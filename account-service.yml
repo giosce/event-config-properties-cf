@@ -21,7 +21,7 @@ spring:
 security:
   oauth2:
     resource:
-      userInfoUri: ${vcap.services.user-service.credentials.uri:http://user-service-silly-ratel.apps.apbg.apcf.io}/uaa/user
+      userInfoUri: ${vcap.services.user-service.credentials.uri:http://user-service-shiny-bat.apps.apbg.apcf.io/}/uaa/user
     client:
       client-id: acme
       access-token-uri: http://online-store-web.apps.apbg.apcf.io
@@ -32,7 +32,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://discovery-service-chatty-raven.apps.apbg.apcf.io}/eureka/
+      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://discovery-service-optimistic-rabbit.apps.apbg.apcf.io/}/eureka/
 ---
 spring:
   profiles: docker
