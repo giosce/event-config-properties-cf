@@ -29,10 +29,10 @@ eureka:
 ---
 spring:
   profiles: development
-  data:
-    mongodb:
-      host: 127.0.0.1
-      port: 27017
+  #data:
+  #  mongodb:
+  #    host: 127.0.0.1
+  #    port: 27017
   mvc:
     date-format: "YYYY-MM-dd"
   jackson:
@@ -48,7 +48,7 @@ security:
       access-token-uri: ${vcap.services.online-store-web.credentials.uri:http://online-store-web-agile-antelope.apps.apbg.apcf.io}
 eureka:
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: false
   client:
     registerWithEureka: true
     fetchRegistry: true
