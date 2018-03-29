@@ -9,4 +9,4 @@ eureka:
     region: default
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://discovery-service-optimistic-rabbit.apps.apbg.apcf.io}/eureka/
+      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://discovery-service-optimistic-rabbit.apps.apbg.apcf.io}
