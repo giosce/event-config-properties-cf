@@ -3,13 +3,13 @@ spring.profiles.active: development
 spring:
   profiles: cloud
   neo4j:
-    host: ${SPRING_NEO4J_HOST:18.217.101.30}
+    host: ${SPRING_NEO4J_HOST:127.0.0.1}
     port: ${SPRING_NEO4J_PORT:7474}
 ---
 spring:
   profiles: development
   neo4j:
-    host: ${SPRING_NEO4J_HOST:18.217.101.30}
+    host: ${SPRING_NEO4J_HOST:127.0.0.1}
     port: ${SPRING_NEO4J_PORT:7474}
 ---
 spring:
