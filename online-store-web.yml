@@ -11,7 +11,7 @@ zuul:
   routes:
     edge-service:
       path: /api/**
-      url: ${vcap.services.edge-service.credentials.uri:http://edge-service-generous-dog.apps.apbg.apcf.io}
+      url: ${vcap.services.edge-service.credentials.uri:http://edge-service-turbulent-tiger.apps.apbg.apcf.io}
     auth-service:
       path: /user/**
       url: ${vcap.services.user-service.credentials.uri:http://user-service-shiny-bat.apps.apbg.apcf.io}/uaa/user
