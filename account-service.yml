@@ -7,7 +7,7 @@ spring:
 security:
   oauth2:
     resource:
-      userInfoUri: ${vcap.services.user-service.credentials.uri:http://user-service-shiny-bat.apps.apbg.apcf.io}/uaa/user
+      userInfoUri: ${vcap.services.user-service.credentials.uri:http://user-service-reliable-hartebeest.apps.apbg.apcf.io}/uaa/user
     client:
       client-id: acme
 ---
