@@ -14,17 +14,17 @@ zuul:
       url: ${vcap.services.edge-service.credentials.uri:http://edge-service-turbulent-tiger.apps.apbg.apcf.io}
     auth-service:
       path: /user/**
-      url: ${vcap.services.user-service.credentials.uri:http://user-service-shiny-bat.apps.apbg.apcf.io}/uaa/user
+      url: ${vcap.services.user-service.credentials.uri:http://user-service-reliable-hartebeest.apps.apbg.apcf.io}/uaa/user
     user-service:
       path: /users/**
 security:
   enable-csrf: false
   oauth2:
     resource:
-      userInfoUri: ${vcap.services.user-service.credentials.uri:http://user-service-shiny-bat.apps.apbg.apcf.io}/uaa/user
+      userInfoUri: ${vcap.services.user-service.credentials.uri:http://user-service-reliable-hartebeest.apps.apbg.apcf.io}/uaa/user
     client:
-      accessTokenUri: ${vcap.services.user-service.credentials.uri:http://user-service-shiny-bat.apps.apbg.apcf.io}/uaa/oauth/token
-      userAuthorizationUri: ${vcap.services.user-service.credentials.uri:http://user-service-shiny-bat.apps.apbg.apcf.io}/uaa/oauth/authorize
+      accessTokenUri: ${vcap.services.user-service.credentials.uri:http://user-service-reliable-hartebeest.apps.apbg.apcf.io}/uaa/oauth/token
+      userAuthorizationUri: ${vcap.services.user-service.credentials.uri:http://user-service-reliable-hartebeest.apps.apbg.apcf.io}/uaa/oauth/authorize
       clientId: acme
       clientSecret: acmesecret
   ignored: /assets/**
@@ -38,20 +38,20 @@ zuul:
   routes:
     edge-service:
       path: /api/**
-      url: ${vcap.services.edge-service.credentials.uri:http://edge-service-generous-dog.apps.apbg.apcf.io}
+      url: ${vcap.services.edge-service.credentials.uri:http://edge-service-turbulent-tiger.apps.apbg.apcf.io}
     auth-service:
       path: /user/**
-      url: ${vcap.services.user-service.credentials.uri:http://user-service-shiny-bat.apps.apbg.apcf.io}/uaa/user
+      url: ${vcap.services.user-service.credentials.uri:http://user-service-reliable-hartebeest.apps.apbg.apcf.io}/uaa/user
     user-service:
       path: /users/**
 security:
   enable-csrf: false
   oauth2:
     resource:
-      userInfoUri: ${vcap.services.user-service.credentials.uri:http://user-service-shiny-bat.apps.apbg.apcf.io}/uaa/user
+      userInfoUri: ${vcap.services.user-service.credentials.uri:http://user-service-reliable-hartebeest.apps.apbg.apcf.io}/uaa/user
     client:
-      accessTokenUri: ${vcap.services.user-service.credentials.uri:http://user-service-shiny-bat.apps.apbg.apcf.io}/uaa/oauth/token
-      userAuthorizationUri: ${vcap.services.user-service.credentials.uri:http://user-service-shiny-bat.apps.apbg.apcf.io}/uaa/oauth/authorize
+      accessTokenUri: ${vcap.services.user-service.credentials.uri:http://user-service-reliable-hartebeest.apps.apbg.apcf.io}/uaa/oauth/token
+      userAuthorizationUri: ${vcap.services.user-service.credentials.uri:http://user-service-reliable-hartebeest.apps.apbg.apcf.io}/uaa/oauth/authorize
       clientId: acme
       clientSecret: acmesecret
 eureka:
@@ -62,7 +62,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://discovery-service-optimistic-rabbit.apps.apbg.apcf.io}/eureka/
+      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://discovery-service-sleepy-gerenuk.apps.apbg.apcf.io}/eureka/
 ---
 spring:
   profiles: docker
