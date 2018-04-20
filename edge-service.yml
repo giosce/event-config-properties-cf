@@ -15,6 +15,14 @@ zuul:
     user-service: /user/**
     catalog-service: /catalog/**
     shopping-cart-service: /shoppingcart/**
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://discovery-service-sleepy-gerenuk.apps.apbg.apcf.io}/eureka/
 security:
   oauth2:
     resource:

@@ -11,6 +11,14 @@ security:
 spring:
   profiles: cloud
 security.ignored: /resources/**
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://discovery-service-sleepy-gerenuk.apps.apbg.apcf.io}/eureka/
 ---
 server:
   port: 8181
