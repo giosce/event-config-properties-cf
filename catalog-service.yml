@@ -14,9 +14,12 @@ spring:
     host: 192.168.99.100
     port: 6379
   datasource:
-    url: jdbc:mysql://10.0.9.37:3306/service_instance_db?useSSL=false
-    username: 270a9d24426a481694529229d1ebfe67
-    password: 0dnnuqehz2v1dt17
+    url: jdbc:mysql://localhost:3306/pcf_ref_app?useSSL=false
+    username: root
+    password: Jacopo!65
+    #url: jdbc:mysql://10.0.9.37:3306/service_instance_db?useSSL=false
+    #username: 270a9d24426a481694529229d1ebfe67
+    #password: 0dnnuqehz2v1dt17
     initialize: true
 eureka:
   instance:
@@ -25,7 +28,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://discovery-service-sleepy-gerenuk.apps.apbg.apcf.io}/eureka/
+      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://localhost:8761}/eureka/
 ---
 spring:
   profiles: docker
