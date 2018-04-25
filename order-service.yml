@@ -42,18 +42,10 @@ spring:
 security:
   oauth2:
     resource:
-      userInfoUri: ${vcap.services.user-service.credentials.uri:http://user-service-reliable-hartebeest.apps.apbg.apcf.io}/uaa/user
+      userInfoUri: ${vcap.services.user-service.credentials.uri:http://localhost:8181}/uaa/user
     client:
       client-id: acme
-      access-token-uri: ${vcap.services.online-store-web.credentials.uri:http://online-store-web.apps.apbg.apcf.io}
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://discovery-service-sleepy-gerenuk.apps.apbg.apcf.io}/eureka/
+      access-token-uri: http://localhost:8787
 ---
 spring:
   profiles: docker
