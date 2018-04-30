@@ -3,8 +3,16 @@ spring.profiles.active: development
 spring:
   profiles: cloud
   neo4j:
-    host: ${SPRING_NEO4J_HOST:18.217.101.30}
-    port: ${SPRING_NEO4J_PORT:7474}
+    host: ${SPRING_NEO4J_HOST:hobby-aeepccdbbpcagbkeoegkneal.dbs.graphenedb.com}
+    port: ${SPRING_NEO4J_PORT:24780}
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://discovery-service-sleepy-gerenuk.apps.apbg.apcf.io}/eureka/
 ---
 spring:
   profiles: development
