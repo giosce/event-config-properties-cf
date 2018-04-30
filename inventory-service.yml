@@ -3,8 +3,10 @@ spring.profiles.active: development
 spring:
   profiles: cloud
   neo4j:
-    host: ${SPRING_NEO4J_HOST:hobby-aeepccdbbpcagbkeoegkneal.dbs.graphenedb.com}
-    port: ${SPRING_NEO4J_PORT:24780}
+    #host: ${SPRING_NEO4J_HOST:hobby-aeepccdbbpcagbkeoegkneal.dbs.graphenedb.com}
+    #port: ${SPRING_NEO4J_PORT:24780}
+    host: hobby-aeepccdbbpcagbkeoegkneal.dbs.graphenedb.com
+    port: 24780
 eureka:
   instance:
     prefer-ip-address: true
